@@ -1,178 +1,206 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Meet's Portfolio</title>
-    <style>
-        :root {
-            --bg-color: #e0f0ff;
-            --text-color: #333;
-            --header-bg: #0077b6;
-            --contact-bg: #caf0f8;
-            --button-bg: #0077b6;
-            --button-text: white;
-            --title-color: white;
-        }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Meet's Portfolio</title>
+  <style>
+    :root {
+      --bg-color: #e0f0ff;
+      --text-color: #333;
+      --header-bg: #0077b6;
+      --contact-bg: #caf0f8;
+      --button-bg: #0077b6;
+      --button-text: white;
+      --title-color: white;
+    }
 
-        body {
-            margin: 0;
-            padding: 0;
-            font-family: Arial, sans-serif;
-            background-color: var(--bg-color);
-            color: var(--text-color);
-        }
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      background-color: var(--bg-color);
+      color: var(--text-color);
+    }
 
-        header {
-            background-color: var(--header-bg);
-            color: var(--title-color);
-            text-align: center;
-            padding: 40px 20px;
-            position: relative;
-        }
+    header {
+      background-color: var(--header-bg);
+      color: var(--title-color);
+      text-align: center;
+      padding: 40px 20px;
+    }
 
-        header h1 {
-            font-size: 3em;
-            margin-bottom: 10px;
-        }
+    header h1 {
+      font-size: 3em;
+      margin-bottom: 10px;
+    }
 
-        header p {
-            font-size: 1.2em;
-            font-style: italic;
-        }
+    header p {
+      font-size: 1.2em;
+      font-style: italic;
+    }
 
-        .tagline {
-            text-align: center;
-            font-size: 1.1em;
-            margin-top: 10px;
-            color: white;
-        }
+    .tagline {
+      text-align: center;
+      font-size: 1.1em;
+      margin-top: 10px;
+      color: white;
+    }
 
-        section {
-            max-width: 1000px;
-            margin: 40px auto;
-            padding: 0 20px;
-        }
+    section {
+      max-width: 1000px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
 
-        h2 {
-            text-align: center;
-            color: var(--header-bg);
-            margin-bottom: 20px;
-        }
+    h2 {
+      text-align: center;
+      color: var(--header-bg);
+      margin-bottom: 20px;
+    }
 
-        p {
-            text-align: center;
-            font-size: 1.1em;
-        }
+    p {
+      text-align: center;
+      font-size: 1.1em;
+    }
 
-        .project-tabs {
-            text-align: center;
-            margin: 20px 0;
-        }
+    .project-tabs {
+      text-align: center;
+      margin: 20px 0;
+    }
 
-        .project-tabs button {
-            margin: 0 10px;
-            padding: 10px 20px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            background-color: var(--button-bg);
-            color: var(--button-text);
-            font-weight: bold;
-        }
+    .project-tabs button {
+      margin: 0 10px;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      background-color: var(--button-bg);
+      color: var(--button-text);
+      font-weight: bold;
+    }
 
-        .project-tabs button:hover {
-            background-color: #005f86;
-        }
+    .project-tabs button:hover {
+      background-color: #005f86;
+    }
 
-        .projects {
-            display: none;
-            grid-template-columns: 1fr;
-            gap: 20px;
-            margin-top: 30px;
-        }
+    .projects {
+      display: none;
+      grid-template-columns: 1fr;
+      gap: 20px;
+      margin-top: 30px;
+    }
 
-        .project {
-            background-color: white;
-            padding: 20px;
-            border-radius: 12px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-            text-align: center;
-        }
+    .project {
+      background-color: white;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      text-align: center;
+    }
 
-        iframe {
-            width: 410px;
-            height: 460px;
-            border: none;
-            border-radius: 8px;
-        }
+    iframe {
+      width: 410px;
+      height: 460px;
+      border: none;
+      border-radius: 8px;
+    }
 
-        pre {
-            text-align: left;
-            background: #f4f4f4;
-            padding: 10px;
-            border-radius: 8px;
-            overflow-x: auto;
-            font-size: 0.9em;
-        }
+    pre {
+      text-align: left;
+      background: #f4f4f4;
+      padding: 10px;
+      border-radius: 8px;
+      overflow-x: auto;
+      font-size: 0.9em;
+    }
 
-        .contact {
-            text-align: center;
-            background-color: var(--contact-bg);
-            padding: 30px 20px;
-            margin-top: 50px;
-        }
+    .contact {
+      text-align: center;
+      background-color: var(--contact-bg);
+      padding: 30px 20px;
+      margin-top: 50px;
+    }
 
-        a {
-            color: var(--header-bg);
-            text-decoration: none;
-            font-weight: bold;
-        }
-    </style>
+    a {
+      color: var(--header-bg);
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .left-title {
+      text-align: left;
+      margin: 30px 0 10px;
+      font-size: 1.2em;
+      font-weight: bold;
+      color: #0077b6;
+    }
+
+    .left-text {
+      text-align: left;
+      font-size: 1em;
+      margin-bottom: 10px;
+    }
+
+    ul.left-text {
+      padding-left: 20px;
+    }
+  </style>
 </head>
 <body>
 
-    <header>
-        <h1>Meet's Portfolio</h1>
-        <p>CS Honors Student | Tennis Enthusiast</p>
-        <div class="tagline">Coding with Precision, Playing with Passion.</div>
-    </header>
+  <header>
+    <h1>Meet's Portfolio</h1>
+    <p>CS Honors Student | Python Developer | Tennis Enthusiast</p>
+    <div class="tagline">Coding with Precision, Playing with Passion.</div>
+  </header>
 
-    <section>
-        <h2>About Me</h2>
-        <p>Hello! I’m Meet, a Computer Science Honors student in high school. I love building Python apps that can help make the world a better place, many of which focus on global goals. I also play tennis, which keeps me focused and driven!</p>
-    </section>
+  <section>
+    <h2>About Me</h2>
+    <p>
+      Hello! I’m Meet, a Computer Science Honors student in high school.
+      I love building Python apps that can help make the world a better place, many of which focus on global goals.
+      I also play tennis, which keeps me focused and driven!
+    </p>
+  </section>
 
-    <!-- Project Tabs -->
-    <div class="project-tabs">
-        <button onclick="showProjects(1)">Project 1</button>
-        <button onclick="showProjects(2)">Project 2</button>
-        <button onclick="showProjects(3)">Project 3</button>
-        <button onclick="showProjects(4)">Project 4</button>
-        <button onclick="showProjects(5)">Project 5</button>
-        <button onclick="showProjects(6)">Project 6</button>
-    </div>
+  <!-- Project Tabs -->
+  <div class="project-tabs">
+    <button onclick="showProjects(1)">Project 1</button>
+    <button onclick="showProjects(2)">Project 2</button>
+    <button onclick="showProjects(3)">Project 3</button>
+    <button onclick="showProjects(4)">Project 4</button>
+    <button onclick="showProjects(5)">Project 5</button>
+    <button onclick="showProjects(6)">Project 6</button>
+  </div>
 
-    <!-- Projects Section -->
-    <section>
-        <h2>My Projects</h2>
+  <!-- Projects Section -->
+  <section>
+    <h2>My Projects</h2>
 
-        <!-- Project 1 Updated -->
-        <div id="project1" class="projects">
-            <div class="project">
-                <h3>Project 1: Climate Action Visualizer</h3>
-                <iframe src="https://academy.cs.cmu.edu/sharing/redSnail975811/embed" width="410" height="460"></iframe>
-                <p>This project visualizes global challenges related to climate change and sustainability. Through shapes and colors, I represented the message of action, nature, and responsibility. It aligns with global goals such as climate action, life on land, and responsible consumption.</p>
-                <p><strong>What I learned:</strong></p>
-                <ul style="text-align: left; max-width: 600px; margin: 0 auto;">
-                    <li>Usingmultiple geometric shapes in one canvas</li>
-                    <li>applying fill colors to shapes</li>
+    <!-- Project 1 Updated -->
+    <div id="project1" class="projects">
+      <div class="project">
+        <h3>Project 1: Climate Action Visualizer</h3>
+        <iframe src="https://academy.cs.cmu.edu/sharing/redSnail975811/embed" width="410" height="460"></iframe>
+
+        <div class="left-title">What the code does</div>
+        <p class="left-text">This code creates a tree using shapes and colors, including a brighter version and a darker version for contrast.</p>
+
+        <p style="text-align: center;">
+          This project visualizes global challenges related to climate change and sustainability. Through shapes and colors, I represented the message of action, nature, and responsibility. It aligns with global goals such as climate action, life on land, and responsible consumption.
+        </p>
+
+        <div class="left-title">What I learned</div>
+        <ul class="left-text">
+          <li>Using multiple geometric shapes in one canvas</li>
+                    <li>Applying fill colors to shapes</li>
                     <li>Using gradients as a background</li>
                     <li>Using labels with styling (size, bold)</li>
                     <li>Organizing elements visually with coordinates</li>
-                    <li>How to align shapes symmetrically</li>
-                </ul>
-                <pre>
+                    <li>Aligning shapes symmetrically</li>
+        </ul>
+        <pre>
 Rect(0,0,200,200, fill=gradient('deepSkyBlue','oldLace','darkOrange', start='left'))
 Label('Climate Action', 100, 25, size=15, bold=True)
 Polygon(30,200,28,195,33,185,48,105,43,180, fill='peru')
@@ -183,66 +211,63 @@ Line(168,114,146,116)
 Line(166,126,185,130)
 Polygon(70,160,70,170,115,170,115,160)
 RegularPolygon(118,165,15,3, rotateAngle=90)
-                </pre>
-            </div>
-        </div>
-        <p><strong>This creates a tree with color and a darker version too.</strong></p>
+        </pre>
+      </div>
+    </div>
 
-        <!-- Other Placeholder Projects -->
-        <div id="project2" class="projects">
-            <div class="project">
-                <h3>Project 2</h3>
-                <p>Description of Project 2.</p>
-            </div>
-        </div>
+    <!-- Other Placeholder Projects -->
+    <div id="project2" class="projects">
+      <div class="project">
+        <h3>Project 2</h3>
+        <p>Description of Project 2.</p>
+      </div>
+    </div>
 
-        <div id="project3" class="projects">
-            <div class="project">
-                <h3>Project 3</h3>
-                <p>Description of Project 3.</p>
-            </div>
-        </div>
+    <div id="project3" class="projects">
+      <div class="project">
+        <h3>Project 3</h3>
+        <p>Description of Project 3.</p>
+      </div>
+    </div>
 
-        <div id="project4" class="projects">
-            <div class="project">
-                <h3>Project 4</h3>
-                <p>Description of Project 4.</p>
-            </div>
-        </div>
+    <div id="project4" class="projects">
+      <div class="project">
+        <h3>Project 4</h3>
+        <p>Description of Project 4.</p>
+      </div>
+    </div>
 
-        <div id="project5" class="projects">
-            <div class="project">
-                <h3>Project 5</h3>
-                <p>Description of Project 5.</p>
-            </div>
-        </div>
+    <div id="project5" class="projects">
+      <div class="project">
+        <h3>Project 5</h3>
+        <p>Description of Project 5.</p>
+      </div>
+    </div>
 
-        <div id="project6" class="projects">
-            <div class="project">
-                <h3>Project 6</h3>
-                <p>Description of Project 6.</p>
-            </div>
-        </div>
+    <div id="project6" class="projects">
+      <div class="project">
+        <h3>Project 6</h3>
+        <p>Description of Project 6.</p>
+      </div>
+    </div>
+  </section>
 
-    </section>
+  <!-- Contact Section -->
+  <section class="contact">
+    <h2>Contact Me</h2>
+    <p>Email: <a href="mailto:youremail@example.com">youremail@example.com</a></p>
+    <p>GitHub: <a href="https://github.com/yourgithub" target="_blank">github.com/yourgithub</a></p>
+  </section>
 
-    <!-- Contact Section -->
-    <section class="contact">
-        <h2>Contact Me</h2>
-        <p>Email: <a href="mailto:meet.rathod@vhhscougars.org">youremail@example.com</a></p>
-        <p>GitHub: <a href="https://github.com/meetthecoder2009" target="_blank">github.com/yourgithub</a></p>
-    </section>
-
-    <script>
-        function showProjects(num) {
-            for (let i = 1; i <= 6; i++) {
-                document.getElementById('project' + i).style.display = 'none';
-            }
-            document.getElementById('project' + num).style.display = 'grid';
-        }
-        // Show the first project by default
-        showProjects(1);
-    </script>
+  <script>
+    function showProjects(num) {
+      for (let i = 1; i <= 6; i++) {
+        document.getElementById('project' + i).style.display = 'none';
+      }
+      document.getElementById('project' + num).style.display = 'grid';
+    }
+    showProjects(1); // show Project 1 by default
+  </script>
 
 </body>
 </html>
