@@ -49,23 +49,6 @@
             color: var(--tagline-color);
         }
 
-        .dark-mode-button {
-            position: absolute;
-            top: 20px;
-            right: 20px;
-            padding: 10px 20px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            background-color: white;
-            color: var(--header-bg);
-            font-weight: bold;
-        }
-
-        .dark-mode-button:hover {
-            background-color: #f0f0f0;
-        }
-
         section {
             max-width: 1000px;
             margin: 40px auto;
@@ -145,7 +128,6 @@
         <h1>Meet's Portfolio</h1>
         <p>CS Honors Student | Python Developer | Tennis Enthusiast</p>
         <div class="tagline">Coding with Precision, Playing with Passion.</div>
-        <button class="dark-mode-button" onclick="toggleDarkMode()">Toggle Dark Mode</button>
     </header>
 
     <section>
@@ -214,37 +196,12 @@
     <!-- Contact Section -->
     <section class="contact">
         <h2>Contact Me</h2>
-        <p>Email: <a href="mailto:youremail@example.com">youremail@example.com</a></p>
-        <p>GitHub: <a href="https://github.com/yourgithub" target="_blank">github.com/yourgithub</a></p>
+        <p>Email: <a href="mailto:youremail@example.com">meet.rathod@vhhscougars.org</a></p>
+        <p>GitHub: <a href="https://github.com/yourgithub" target="_blank">meetthecoder2009.github.io</a></p>
     </section>
 
     <!-- Scripts -->
     <script>
-        let darkMode = false;
-
-        function toggleDarkMode() {
-            darkMode = !darkMode;
-            if (darkMode) {
-                document.documentElement.style.setProperty('--bg-color', '#1e1e1e');
-                document.documentElement.style.setProperty('--text-color', '#f0f0f0');
-                document.documentElement.style.setProperty('--header-bg', '#333');
-                document.documentElement.style.setProperty('--contact-bg', '#444');
-                document.documentElement.style.setProperty('--tagline-color', '#cccccc');
-                document.documentElement.style.setProperty('--button-bg', '#555');
-                document.documentElement.style.setProperty('--button-text', 'white');
-                document.documentElement.style.setProperty('--title-color', '#f0f0f0');
-            } else {
-                document.documentElement.style.setProperty('--bg-color', '#e0f0ff');
-                document.documentElement.style.setProperty('--text-color', '#333');
-                document.documentElement.style.setProperty('--header-bg', '#0077b6');
-                document.documentElement.style.setProperty('--contact-bg', '#caf0f8');
-                document.documentElement.style.setProperty('--tagline-color', '#555');
-                document.documentElement.style.setProperty('--button-bg', '#0077b6');
-                document.documentElement.style.setProperty('--button-text', 'white');
-                document.documentElement.style.setProperty('--title-color', 'white');
-            }
-        }
-
         function showProjects(num) {
             for (let i = 1; i <= 6; i++) {
                 document.getElementById('project' + i).style.display = 'none';
