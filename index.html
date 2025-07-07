@@ -45,7 +45,7 @@
             text-align: center;
             font-size: 1.1em;
             margin-top: 10px;
-            color: white; /* Changed to white */
+            color: white;
         }
 
         section {
@@ -107,6 +107,15 @@
             border-radius: 8px;
         }
 
+        pre {
+            text-align: left;
+            background: #f4f4f4;
+            padding: 10px;
+            border-radius: 8px;
+            overflow-x: auto;
+            font-size: 0.9em;
+        }
+
         .contact {
             text-align: center;
             background-color: var(--contact-bg);
@@ -148,13 +157,28 @@
     <section>
         <h2>My Projects</h2>
 
+        <!-- Project 1 Updated -->
         <div id="project1" class="projects">
             <div class="project">
-                <h3>Project 1</h3>
+                <h3>Climate Action Visualizer</h3>
                 <iframe src="https://academy.cs.cmu.edu/sharing/redSnail975811/embed" width="410" height="460"></iframe>
+                <p>This project visualizes climate action using shapes and color to emphasize global goals. I addressed multiple issues like sustainability, responsible consumption, and clean energy through coding. I learned how to use multiple shapes, labels, and how to fill them with different colors and gradients.</p>
+                <pre>
+Rect(0,0,200,200, fill=gradient('deepSkyBlue','oldLace','darkOrange', start='left'))
+Label('Climate Action', 100, 25, size=15, bold=True)
+Polygon(30,200,28,195,33,185,48,105,43,180, fill='peru')
+Star(48,105,40,9, fill='limeGreen')
+Star(48,105,30.8, fill='green')
+Polygon(158,200,148,195,153,185,168,105,163,180, fill='black')
+Line(168,114,146,116)
+Line(166,126,185,130)
+Polygon(70,160,70,170,115,170,115,160)
+RegularPolygon(118,165,15,3, rotateAngle=90)
+                </pre>
             </div>
         </div>
 
+        <!-- Other Placeholder Projects -->
         <div id="project2" class="projects">
             <div class="project">
                 <h3>Project 2</h3>
@@ -209,5 +233,6 @@
         // Show the first project by default
         showProjects(1);
     </script>
+
 </body>
 </html>
