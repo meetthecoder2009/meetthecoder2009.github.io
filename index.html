@@ -13,6 +13,7 @@
             --tagline-color: #555;
             --button-bg: #0077b6;
             --button-text: white;
+            --title-color: white;
         }
 
         body {
@@ -25,7 +26,7 @@
 
         header {
             background-color: var(--header-bg);
-            color: white;
+            color: var(--title-color);
             text-align: center;
             padding: 40px 20px;
             position: relative;
@@ -231,6 +232,7 @@
                 document.documentElement.style.setProperty('--tagline-color', '#cccccc');
                 document.documentElement.style.setProperty('--button-bg', '#555');
                 document.documentElement.style.setProperty('--button-text', 'white');
+                document.documentElement.style.setProperty('--title-color', '#f0f0f0');
             } else {
                 document.documentElement.style.setProperty('--bg-color', '#e0f0ff');
                 document.documentElement.style.setProperty('--text-color', '#333');
@@ -239,6 +241,7 @@
                 document.documentElement.style.setProperty('--tagline-color', '#555');
                 document.documentElement.style.setProperty('--button-bg', '#0077b6');
                 document.documentElement.style.setProperty('--button-text', 'white');
+                document.documentElement.style.setProperty('--title-color', 'white');
             }
         }
 
