@@ -5,60 +5,94 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Meet's Portfolio</title>
     <style>
+        /* General Styles */
         body {
             margin: 0;
             font-family: 'Arial', sans-serif;
             background-color: #f0f8ff; /* Light blue background */
             color: #333;
         }
+
+        /* Header Styles */
         header {
             background-color: #0077b6; /* Deep blue header */
             color: white;
-            padding: 20px;
+            padding: 30px 20px;
             text-align: center;
         }
+
         header h1 {
             margin: 0;
             font-size: 3em;
         }
+
         header p {
-            margin: 5px 0 0 0;
+            margin: 10px 0 0 0;
             font-style: italic;
+            font-size: 1.2em;
         }
+
+        /* Section Styles */
         .section {
             padding: 40px 20px;
             max-width: 1000px;
             margin: auto;
         }
+
+        .section h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 2em;
+            color: #0077b6;
+        }
+
+        /* Project Styles */
         .projects {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 20px;
         }
+
         .project {
             background-color: white;
             border-radius: 12px;
             box-shadow: 0 4px 8px rgba(0,0,0,0.1);
             padding: 20px;
+            text-align: center;
         }
+
         iframe {
             width: 100%;
-            height: 300px;
+            height: 250px;
             border: none;
             border-radius: 8px;
         }
+
+        /* Contact Section */
         .contact {
             text-align: center;
-            padding: 20px;
+            padding: 30px 20px;
             background-color: #caf0f8;
             border-top: 2px solid #0077b6;
         }
+
         a {
             color: #0077b6;
             text-decoration: none;
         }
+
         a:hover {
             text-decoration: underline;
+        }
+
+        /* Mobile Friendly */
+        @media (max-width: 600px) {
+            header h1 {
+                font-size: 2.5em;
+            }
+            iframe {
+                height: 200px;
+            }
         }
     </style>
 </head>
@@ -71,7 +105,9 @@
 
     <div class="section">
         <h2>About Me</h2>
-        <p>Hello! I’m Meet, a Computer Science Honors student in high school. I love building Python apps that can make a real-world difference, especially in supporting global goals. I also enjoy tennis, which helps me bring focus and precision into everything I do — both on the court and in my code.</p>
+        <p style="text-align: center; max-width: 700px; margin: auto;">
+            Hello! I’m Meet, a Computer Science Honors student in high school. I build Python apps that solve real-world problems and support global goals. I’m passionate about using technology to make a positive impact, and I bring the same focus I have in tennis to my work in coding.
+        </p>
     </div>
 
     <div class="section">
@@ -87,31 +123,31 @@
             <!-- Project 2 -->
             <div class="project">
                 <h3>Project 2</h3>
-                <p>Description of Project 2</p>
+                <p>Brief description of Project 2.</p>
             </div>
 
             <!-- Project 3 -->
             <div class="project">
                 <h3>Project 3</h3>
-                <p>Description of Project 3</p>
+                <p>Brief description of Project 3.</p>
             </div>
 
             <!-- Project 4 -->
             <div class="project">
                 <h3>Project 4</h3>
-                <p>Description of Project 4</p>
+                <p>Brief description of Project 4.</p>
             </div>
 
             <!-- Project 5 -->
             <div class="project">
                 <h3>Project 5</h3>
-                <p>Description of Project 5</p>
+                <p>Brief description of Project 5.</p>
             </div>
 
             <!-- Project 6 -->
             <div class="project">
                 <h3>Project 6</h3>
-                <p>Description of Project 6</p>
+                <p>Brief description of Project 6.</p>
             </div>
         </div>
     </div>
