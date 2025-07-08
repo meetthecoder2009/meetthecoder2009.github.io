@@ -235,25 +235,24 @@ RegularPolygon(118,165,15,3, rotateAngle=90)
         </ul>
         <pre>
 app.background = 'lightSkyBlue'
-middleCounter = Label('0', 50, 50)
-
-# Time changer
-def onStep():
-    Circle(50,50,20, fill=gradient('orange', 'darkOrange', 'gold'))
-    Circle(50,50,20, fill=gradient('orange', 'darkOrange', 'gold'))
-
-Label('Check-ins', 200,100, size=20, font='monospace')
-Label('Daily Log', 200,120, size=15, font='monospace')
-Rect(0,0,400,200, fill='lightGreen')
-
-def onMousePress(x, y):
-    Circle(50,50,20, fill='white')
-    Circle(50,50,20, fill='white')
-    Circle(50,50,20, fill='white')
-    Circle(50,50,20, fill='white')
-    Label('0',50,50)
-
-app.run()
+slideCounter = Label(1,-50,-50)
+#slide changer
+#Sun    
+def meetLogo(x,y):
+    Star(x,y,50, 20, fill=gradient('orange','darkOrange', 'gold'))
+    Circle(x,y,30, fill=gradient('orange','darkOrange', 'gold'))
+meetLogo(42,55)
+Label('Climate Action',200,180, size=50, font='montserrat')
+Label('By: Jayesh and Meet',200,262, size=15, font='montserrat')
+Rect(0,329,400,71, fill='lightGreen')
+#cloud
+def jayeshLogo(x,y):
+    Circle(x+10,y, 35, fill='white')
+    Circle(x-25,y, 30, fill='white')
+    Circle(x+60,y, 30, fill='white')
+    Circle(x+40,y+30, 30, fill='white')
+    Circle(x-10,y+30, 30, fill='white')
+jayeshLogo(80,70)
         </pre>
         <div class="left-title">What the code does</div>
         <p class="left-text">
