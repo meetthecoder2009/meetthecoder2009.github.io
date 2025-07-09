@@ -234,25 +234,11 @@ RegularPolygon(118,165,15,3, rotateAngle=90)
           <li>Learned that overlapping identical shapes with gradient fills creates intensity and depth without needing transparency settings.</li>
         </ul>
         <pre>
-def meetLogo(x,y):
-    Star(x,y,50, 20, fill=gradient('orange','darkOrange', 'gold'))
-    Circle(x,y,30, fill=gradient('orange','darkOrange', 'gold'))
-meetLogo(42,55)
-Label('Climate Action',200,180, size=50, font='montserrat')
-Label('By: Jayesh and Meet',200,262, size=15, font='montserrat')
-Rect(0,329,400,71, fill='lightGreen')
-#cloud
-def jayeshLogo(x,y, color, lightningVisible):
-    Circle(x+10,y, 35, fill=color)
-    Circle(x-25,y, 30, fill=color)
-    Circle(x+60,y, 30, fill=color)
-    Circle(x+40,y+30, 30, fill=color)
-    Circle(x-10,y+30, 30, fill=color)
-    Polygon(x+5, y+33, x+20, y+33, x+11, y+64, x+15, y+80, x+3, y+62, fill=gradient('gold','yellow','gold'),visible = lightningVisible)
-    Polygon(x+32, y+33, x+47, y+33, x+38, y+64, x+42, y+80, x+30, y+62, fill=gradient('gold','yellow','gold'),visible = lightningVisible)
-    Polygon(x-22, y+33, x-7, y+33, x-16, y+64, x-12, y+80, x-24, y+62, fill=gradient('gold','yellow','gold'), visible = lightningVisible)
-jayeshLogo(80,70,'white', False)
-#slide 1-5
+def meetLogo(x,y,sunColor):
+    Star(x,y,50, 20, fill=sunColor)
+    Circle(x,y,30, fill=sunColor)
+meetLogo(32,328,'orange')
+          
 def onMouseRelease (x,y):
     slideCounter.value += 1
     if slideCounter.value >= 5:
@@ -261,8 +247,19 @@ def onMouseRelease (x,y):
         #Meet's intro to climate change
         Rect(0,0,400,400, fill='lightBlue')
         Rect(0,329,400,71, fill=rgb(174,225,85))
-        meetLogo(42,55)
-        jayeshLogo(120,70, 'lightCyan', False)
+        meetLogo(44,117,'darkOrange' )
+    if slideCounter.value == 3:
+        #jayesh's how does this affect us lslide
+        Rect(0,0,400,400, fill='lightSteelBlue')
+        meetLogo(120,28, 'tomato')
+    if slideCounter.value == 4:
+        #solutions - Jayesh's
+        Rect(0,0,400,400, fill='lightSalmon')
+        meetLogo(205,28, 'darkRed')
+    if slideCounter.value == 5:
+        #How can we help? - Meet's
+        Rect(0,0,400,400, fill='coral')
+        meetLogo(289,77, 'orangeRed')
         </pre>
         <div class="left-title">What the code does</div>
         <p class="left-text">
