@@ -268,13 +268,57 @@ def onMouseRelease (x,y):
       </div>
     </div>
 
-    <!-- Placeholder Projects -->
-    <div id="project3" class="projects">
-      <div class="project">
-        <h3>Project 3</h3>
-        <p>Description of Project 3.</p>
-      </div>
-    </div>
+    <!-- Project 3 -->
+<div id="project3" class="projects">
+  <div class="project">
+    <h3>Project 3: Windmill Simulator</h3>
+    <iframe src="https://academy.cs.cmu.edu/sharing/hotPinkFox976274/embed"></iframe>
+
+    <p style="text-align: center;">
+      Windmill Simulator is a gamified learning experience designed to increase awareness about climate change. Through playful interaction, users engage in energy production and resource upgrading, which subtly promotes the idea that even small contributions to clean windmill technologies can have a big impact on the environment. The game encourages players to understand energy systems and the importance of transitioning to sustainable sources like wind power.
+    </p>
+
+    <div class="left-title">What I learned</div>
+    <ul class="left-text">
+      <li>Applied conditional logic using <code>if</code> statements for game progression and feature unlocks</li>
+      <li>Created and reused complex functions that execute across different parts of the code</li>
+      <li>Handled visual feedback using flags and conditional rendering with <code>Label</code> and <code>upgradeGift()</code></li>
+      <li>Implemented dynamic value updates and upgrades using modular function calls</li>
+      <li>Refined mouse interaction handling, state tracking, and visual layering with <code>toFront()</code> techniques</li>
+      <li>Learned how game mechanics can model real-world systems and educate players through meaningful interaction</li>
+    </ul>
+
+    <pre>
+# Highlights from the gift upgrade logic
+def upgradeGift(level):
+    if level == 20:
+        app.giftMessage.value = 'Gift is fully upgraded'
+    elif level == 10:
+        app.giftMessage.value = 'Gift is halfway upgraded'
+    elif level == 5:
+        app.giftMessage.value = 'Gift is base level'
+    app.giftMessage.visible = True
+    app.giftMessage.toFront()
+
+# Controlled bonus trigger based on user interaction
+def giftTriger():
+    if not app.giftBonusUsed:
+        upgrade(5)
+        info = Label('+5 EPS Bonus!', 274, 48, size=25, fill='red', visible=True)
+        app.giftBonusUsed = True
+        sleep(0.08)
+        info.visible = False
+    gift.visible = False
+    app.giftClicked = False
+    </pre>
+
+    <div class="left-title">What the code does</div>
+    <p class="left-text">
+      This game lets users simulate energy collection by interacting with windmills that improve over time. As players gain energy, they unlock higher-tier upgrades and gifts. The game teaches players that supporting cleaner energy—like wind technology—can lead to greater impact, encouraging a proactive mindset about global climate goals.
+    </p>
+  </div>
+</div>
+
 
     <div id="project4" class="projects">
       <div class="project">
