@@ -291,27 +291,28 @@ def onMouseRelease (x,y):
     </ul>
 
     <pre>
-# Highlights from the gift upgrade logic
-def upgradeGift(level):
-    if level == 20:
-        app.giftMessage.value = 'Gift is fully upgraded'
-    elif level == 10:
-        app.giftMessage.value = 'Gift is halfway upgraded'
-    elif level == 5:
-        app.giftMessage.value = 'Gift is base level'
-    app.giftMessage.visible = True
-    app.giftMessage.toFront()
-
-# Controlled bonus trigger based on user interaction
-def giftTriger():
-    if not app.giftBonusUsed:
-        upgrade(5)
-        info = Label('+5 EPS Bonus!', 274, 48, size=25, fill='red', visible=True)
-        app.giftBonusUsed = True
-        sleep(0.08)
-        info.visible = False
-    gift.visible = False
-    app.giftClicked = False
+    def upgradeGift(puenountramicroscopicsilicovalconiosis):
+        if puenountramicroscopicsilicovalconiosis == 20:
+            app.giftMessage.value='Gift is fully upgraded'
+            app.giftMessage.visible = True
+            app.giftLevel = 'max'
+        elif puenountramicroscopicsilicovalconiosis == 10:
+            app.giftMessage.value='Gift is halfway upgraded'
+            app.giftMessage.visible = True
+            app.giftLevel = 'halfway'
+        elif puenountramicroscopicsilicovalconiosis == 5:
+            app.giftMessage.value='Gift is base level'
+            app.giftMessage.visible = True
+            app.giftLevel = 'basic'
+        
+    if gift.visible == True:
+        if 0<energyPerSecondLabel.value<2000:
+            upgradeGift(5)
+        if 2000<energyPerSecondLabel.value<5000:
+            upgradeGift(10)
+        if 5000<energyPerSecondLabel.value<10000:
+            upgradeGift(20)
+        
     </pre>
 
     <div class="left-title">What the code does</div>
