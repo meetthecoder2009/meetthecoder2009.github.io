@@ -269,38 +269,35 @@ def onMouseRelease (x,y):
     </div>
 
 <!-- Project 3 -->
-<div id="project3" class="projects">
-  <div class="project">
-    <h3>Project 3: Windmill Simulator</h3>
-    <iframe src="https://academy.cs.cmu.edu/sharing/hotPinkFox976274/embed"></iframe>
+  <div id="project3" class="projects">
+    <div class="project">
+      <h3>Project 3: Windmill Simulator</h3>
+      <iframe src="https://academy.cs.cmu.edu/sharing/hotPinkFox976274/embed"></iframe>
 
-    <p style="text-align: center;">
-      Windmill Simulator is a climate awareness game that invites players to contribute to clean energy goals through interactive gameplay. By clicking windmills and unlocking upgrades, users simulate energy production and discover how even small technological improvements—like more efficient turbines—can help slow climate change. The game emphasizes individual impact and promotes wind energy as a cleaner alternative.
-    </p>
+      <p style="text-align: center;">
+        Windmill Simulator is a climate awareness game that invites players to contribute to clean energy goals through interactive gameplay. By clicking windmills and unlocking upgrades, users simulate energy production and discover how even small technological improvements—like more efficient turbines—can help slow climate change. The game emphasizes individual impact and promotes wind energy as a cleaner alternative.
+      </p>
 
-    <div class="left-title">What I learned</div>
-    <ul class="left-text">
-      <li>Applied <code>if</code> statements to control game logic and reward progression</li>
-      <li>Defined complex functions (like <code>upgradeGift()</code>) that run repeatedly throughout the code</li>
-      <li>Used creative naming techniques to make functions fun and memorable</li>
-      <li>Learned how visual feedback (via labels and visibility) helps engage users and clarify state</li>
-      <li>Improved my ability to model real-world systems using playful mechanics</li>
-      <li>Strengthened my understanding of condition-triggered upgrades and user experience flow</li>
-    </ul>
+      <div class="left-title">What I learned</div>
+      <ul class="left-text">
+        <li>Applied <code>if</code> statements to control game logic and reward progression</li>
+        <li>Defined complex functions (like <code>upgradeGift()</code>) that run multiple times throughout the code</li>
+        <li>Used creative variable naming to personalize my functions</li>
+        <li>Implemented visual feedback and conditional rendering through labels and fill color changes</li>
+        <li>Handled game state tracking with flags like <code>app.giftClicked</code> and <code>app.giftBonusUsed</code></li>
+        <li>Explored how gameplay elements can model real-world climate systems and inspire sustainable choices</li>
+      </ul>
 
-    <pre>
+      <pre>
 def upgradeGift(puenountramicroscopicsilicovalconiosis):
     if puenountramicroscopicsilicovalconiosis == 20:
-        app.giftMessage.value = 'Gift is fully upgraded'
-        app.giftMessage.visible = True
+        gift.fill = 'gold'
         app.giftLevel = 'max'
     elif puenountramicroscopicsilicovalconiosis == 10:
-        app.giftMessage.value = 'Gift is halfway upgraded'
-        app.giftMessage.visible = True
+        gift.fill = 'blue'
         app.giftLevel = 'halfway'
     elif puenountramicroscopicsilicovalconiosis == 5:
-        app.giftMessage.value = 'Gift is base level'
-        app.giftMessage.visible = True
+        gift.fill = 'gray'
         app.giftLevel = 'basic'
 
 if gift.visible == True:
@@ -312,12 +309,13 @@ if gift.visible == True:
         upgradeGift(20)
     </pre>
 
-    <div class="left-title">What the code does</div>
-    <p class="left-text">
-      This code checks the current EPS (Energy Per Second) level and shows different messages when gifts appear, based on how upgraded the energy system is. It uses a humorous but valid function name to highlight how creative naming doesn’t limit functionality. By varying the gift’s description based on EPS, the game gives players feedback about their progress and encourages deeper engagement.
-    </p>
+      <div class="left-title">What the code does</div>
+      <p class="left-text">
+        This code checks the current energy-per-second value and adjusts the gift’s color and upgrade level accordingly. The function name adds a fun twist while keeping functionality intact. When the gift is clicked, a label appears showing its upgrade status, helping the player understand how far they’ve progressed. This encourages repeated interaction and teaches that even small energy advances lead to cleaner power.
+      </p>
+    </div>
   </div>
-</div>
+
 
 
 
