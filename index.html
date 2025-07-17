@@ -340,26 +340,70 @@ if gift.visible == True:
         </ul>
         <pre>
 #Meet
-def onMousePress(mouseX, mouseY):
-    # ... (other code for start button) ...
-    if app.questionNum == 2:
-        if app.label3.hits(mouseX, mouseY): # Check if the correct option (label3) is clicked
+if app.questionNum == 2:
+        
+        if app.label3.hits(mouseX, mouseY):
             correctLabel.value = 'Correct!'
             correctLabel.fill = 'green'
             correctLabel.visible = True
             correctLabel.toFront()
-        elif app.label2.hits(mouseX, mouseY) or app.label1.contains(mouseX, mouseY) or app.label4.contains(mouseX, mouseY):
+            app.questionNum += 1
+            app.correct += 1
+            sleep(0.08)
+        if app.label2.hits(mouseX, mouseY) or app.label1.contains(mouseX, mouseY) or app.label4.contains(mouseX, mouseY):
             correctLabel.value = 'Incorrect, try again'
             correctLabel.fill = 'red'
             correctLabel.visible = True
             correctLabel.toFront()
-        if correctLabel.visible == True:
-            # Display a fact after an answer attempt
-            fact('Fact: Sub-Saharan Africa has the highest', 'hunger rates due to poverty.', 'black', False)
+    if app.questionNum == 4:
+        if app.label3.hits(mouseX, mouseY):
+            correctLabel.value = 'Correct!'
+            correctLabel.fill = 'green'
+            correctLabel.visible = True
+            correctLabel.toFront()
+            app.questionNum += 1
+            app.correct += 1
+            sleep(0.08)
+        if app.label2.hits(mouseX, mouseY) or app.label1.contains(mouseX, mouseY) or app.label4.contains(mouseX, mouseY):
+            correctLabel.value = 'Incorrect, try again'
+            correctLabel.fill = 'red'
+            correctLabel.visible = True
+            correctLabel.toFront()
+            
+    if app.questionNum == 6:
+        if app.label2.hits(mouseX, mouseY):
+            correctLabel.value = 'Correct!'
+            correctLabel.fill = 'green'
+            correctLabel.visible = True
+            correctLabel.toFront()
+            sleep(0.08)
+            app.correct += 1
+            app.questionNum += 1
+        if app.label1.hits(mouseX, mouseY) or app.label3.contains(mouseX, mouseY) or app.label4.contains(mouseX, mouseY):
+            correctLabel.value = 'Incorrect, try again'
+            correctLabel.fill = 'red'
+            correctLabel.visible = True
+            correctLabel.toFront()
+
+  def questionLayout(text1, text2, color,bold=True):
+    Label(text1, 199,75, size=20, font='montserrat', fill=color, bold=True)
+    Label(text2, 199, 95, size=20, font='montserrat', fill=color,bold=True)
+
+def optionLayout(option1, option2, option3, option4):
+    app.label1 = Label(option1,30,146, size=18,font='montserrat', align = 'left')
+    app.label2 = Label(option2,30,190, size=18,font='montserrat',align = 'left')
+    app.label3 = Label(option3,30, 234, size=18,font='montserrat',align = 'left')
+    app.label4 = Label(option4,30,278, size=18,font='montserrat',align = 'left')
+    
+
+def fact(write1, write2, color):
+    
+    Label(write1, 197,360, size=18,font='arial', fill=color)
+    Label(write2, 197,374, size=18,font='arial', fill=color)
         </pre>
         <div class="left-title">What the code does</div>
         <p class="left-text">
-          This Python code snippet, part of the <code>onMousePress</code> function, handles user interactions for a specific quiz question (when <code>app.questionNum</code> is 2). It checks if the user clicked the correct answer option (<code>app.label3</code>). If correct, it displays a green "Correct!" message; otherwise, it shows a red "Incorrect, try again" message. After an attempt, it reveals a relevant fun fact to provide additional information, demonstrating how the quiz offers immediate feedback and educational content.
+          This code controls the behavior of a multiple-choice quiz app by checking the user's answer based on which question they are on. When the user clicks on one of the answer choices, the program checks if the click matches the correct label for that specific question—label3 for questions 2 and 4, and label2 for question 6. If the user selects the correct answer, a green “Correct!” message is shown, their score (app.correct) increases by one, and the app moves on to the next question. If the user selects a wrong answer, a red “Incorrect, try again” message appears, but the question does not advance. The questionLayout function is used to display the question text, while optionLayout sets up the four answer choices as clickable labels. Overall, this code helps manage question flow, user interaction, and feedback within the quiz.
         </p>
       </div>
     </div>
