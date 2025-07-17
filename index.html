@@ -329,19 +329,16 @@ if gift.visible == True:
 
         <div class="left-title">What I learned</div>
         <ul class="left-text">
-          <li>Implementing interactive quiz logic using mouse and keyboard inputs.</li>
-          <li>Managing application state to track questions, scores, and UI visibility.</li>
-          <li>Dynamically updating on-screen elements (labels, backgrounds) based on user interaction.</li>
-          <li>Providing immediate visual feedback for correct and incorrect answers.</li>
-          <li>Structuring code with helper functions for questions, options, and facts.</li>
-          <li>Using <code>if</code> statements for conditional logic.</li>
-          <li>Utilizing the <code>hits()</code> method for collision detection.</li>
-          <li>Applying the <code>toFront()</code> method to control element layering.</li>
+          <li>Timing and user feedback.</li>
+          <li>Function design and reusability</li>
+          <li>Using variables to track progress</li>
+          <li>Creating and updating UI elements</li>
+          <li>Event handling with mouse input</li>
+          <li>Conditional logic using if statements</li>
         </ul>
         <pre>
 #Meet
 if app.questionNum == 2:
-        
         if app.label3.hits(mouseX, mouseY):
             correctLabel.value = 'Correct!'
             correctLabel.fill = 'green'
@@ -355,7 +352,7 @@ if app.questionNum == 2:
             correctLabel.fill = 'red'
             correctLabel.visible = True
             correctLabel.toFront()
-    if app.questionNum == 4:
+if app.questionNum == 4:
         if app.label3.hits(mouseX, mouseY):
             correctLabel.value = 'Correct!'
             correctLabel.fill = 'green'
@@ -369,7 +366,6 @@ if app.questionNum == 2:
             correctLabel.fill = 'red'
             correctLabel.visible = True
             correctLabel.toFront()
-            
     if app.questionNum == 6:
         if app.label2.hits(mouseX, mouseY):
             correctLabel.value = 'Correct!'
@@ -385,7 +381,7 @@ if app.questionNum == 2:
             correctLabel.visible = True
             correctLabel.toFront()
 
-  def questionLayout(text1, text2, color,bold=True):
+def questionLayout(text1, text2, color,bold=True):
     Label(text1, 199,75, size=20, font='montserrat', fill=color, bold=True)
     Label(text2, 199, 95, size=20, font='montserrat', fill=color,bold=True)
 
