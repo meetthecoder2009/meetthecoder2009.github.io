@@ -405,21 +405,56 @@ def fact(write1, write2, color):
     </div>
 
     <div id="project5" class="projects">
-      <div class="project">
-        <h3>Project 5</h3>
-        <p>Description of Project 5.</p>
-      </div>
-    </div>
+  <div class="project">
+    <h3>Project 5: Global Food Truck Delivery</h3>
+    <iframe src="https://academy.cs.cmu.edu/sharing/dodgerBlueGoat085178/embed"></iframe>
 
-    <div id="project6" class="projects">
-      <div class="project">
-        <div class="project">
-          <h3>Project 6</h3>
-          <p>Description of Project 6.</p>
-        </div>
-      </div>
-    </div>
-  </section>
+    <p style="text-align: center;">
+      Global Food Truck Delivery is an engaging game where players control a delivery truck that picks up and drops off food between various stations. The green stations represent pickup zones, and the purple ones are drop-off points. Players use the arrow keys to navigate and press ENTER to interact with stations. The goal is to complete successful deliveries while learning about logistics and the importance of food distribution around the world.
+    </p>
+
+    <div class="left-title">What I learned</div>
+    <ul class="left-text">
+      <li>How to detect collisions between the truck and stations</li>
+      <li>Used boolean flags to control pickup and delivery states</li>
+      <li>Built a delivery system using conditionals and key events</li>
+      <li>Implemented a real-time movement system with arrow keys</li>
+      <li>Created an engaging player experience with clear visuals and interactions</li>
+      <li>Simulated a real-world global goal—Zero Hunger—through gameplay</li>
+    </ul>
+
+    <pre>
+def checkTruckDelivery():
+    if delivery.inProgress and delivery.targetStation.hits(truck.centerX, truck.centerY):
+        delivery.inProgress = False
+        delivery.targetStation = None
+        deliveryCount.value += 1
+
+def onKeyHold(key):
+    if key == 'left':
+        truck.centerX -= 5
+    elif key == 'right':
+        truck.centerX += 5
+    elif key == 'up':
+        truck.centerY -= 5
+    elif key == 'down':
+        truck.centerY += 5
+
+def onKeyPress(key):
+    if key == 'enter':
+        for station in stations:
+            if station.color == 'green' and station.hits(truck.centerX, truck.centerY):
+                delivery.inProgress = True
+                delivery.targetStation = random.choice(dropOffStations)
+    </pre>
+
+    <div class="left-title">What the code does</div>
+    <p class="left-text">
+      This code allows the truck to move around using the arrow keys and interact with pickup or delivery stations by pressing ENTER. When the truck collides with a green pickup station, it starts a delivery by selecting a random purple drop-off point. The <code>checkTruckDelivery()</code> function checks if the truck successfully reaches the drop-off station, completing the delivery and updating the score. This models how real-world delivery systems work and highlights the importance of food access.
+    </p>
+  </div>
+</div>
+
 
   <!-- Contact Section -->
   <section class="contact">
