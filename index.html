@@ -350,14 +350,16 @@ if app.questionNum == 4:
         <ul class="left-text">
           <li>Collision detection between shapes and sprites</li>
           <li>Updating game state through keyboard events</li>
-          <li>Managing visibility of stations after delivery</li>
+          <li>Created reusable functions with parameters to simplify and organize code</li>
           <li>Displaying dynamic labels to track game stats</li>
+          <li>Used complex conditionals (if, elif, and, or) to control game logic and user interactions</li>
+
         </ul>
-        <div class="left-title">What the code does</div>
-        <p class="left-text">
-          This code sets up green pick-up and purple drop-off stations and uses collision detection (hitsShape) to manage deliveries. When the truck hits a station and ENTER is pressed, food is either picked up or dropped off, and the station visibility changes. Labels track the current food load and truck capacity.
-        </p>
-        <pre>
+      <div class="left-title">What the code does</div>
+      <p class="left-text">
+        This code sets up green pick-up and purple drop-off stations and uses collision detection (hitsShape) to manage deliveries. When the truck hits a station and ENTER is pressed, food is either picked up or dropped off, and the station visibility changes. Labels track the current food load and truck capacity.
+      </p>
+      <pre>
 # Python Code Snippet (CMU Academy)
 greenstation = Rect(50,325,50,50, fill='green')
 purplestation1 = Rect(240,318,50,50, fill='purple', visible=True)
