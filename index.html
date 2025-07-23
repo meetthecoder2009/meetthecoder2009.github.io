@@ -353,13 +353,8 @@ if app.questionNum == 4:
           <li>Created reusable functions with parameters to simplify and organize code</li>
           <li>Displaying dynamic labels to track game stats</li>
           <li>Used complex conditionals (if, elif, and, or) to control game logic and user interactions</li>
-
         </ul>
-      <div class="left-title">What the code does</div>
-      <p class="left-text">
-        This code sets up green pick-up and purple drop-off stations and uses collision detection (hitsShape) to manage deliveries. When the truck hits a station and ENTER is pressed, food is either picked up or dropped off, and the station visibility changes. Labels track the current food load and truck capacity.
-      </p>
-      <pre>
+        <pre>
 # Python Code Snippet (CMU Academy)
 greenstation = Rect(50,325,50,50, fill='green')
 purplestation1 = Rect(240,318,50,50, fill='purple', visible=True)
@@ -398,10 +393,16 @@ def onMousePress(x, y):
         foodLabel = Label('Food = ', 325, 20)
         truckFood.visible = True
         truckCapacity.visible = True
-        </pre>
+        
+        
+         </pre>
+        <div class="left-title">What the code does</div>
+        <p class="left-text">
+        This code allows the truck to move around using the arrow keys and interact with pickup or delivery stations by pressing ENTER. When the truck collides with a green pickup station, it starts a delivery by selecting a random purple drop-off point. The <code>checkTruckDelivery()</code> function checks if the truck successfully reaches the drop-off station, completing the delivery and updating the score. This models how real-world delivery systems work and highlights the importance of food access.
+        </p>
       </div>
     </div>
-
+          
     <!-- Project 6 -->
     <div id="project6" class="projects">
       <div class="project">
