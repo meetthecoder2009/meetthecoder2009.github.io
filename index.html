@@ -512,10 +512,10 @@ def onMousePress(mouseX, mouseY):
     function showProjects(num) {
       for (let i = 1; i <= 6; i++) {
         const proj = document.getElementById('project' + i);
-        if (proj) proj,stype,display = 'none;
+        if (proj) proj.stype.display = 'none';
       }
       const selected = document.getElementById('project' + num);
-      if (selected) selected.style.display = 'grid';
+      if(selected) selected.style.display = 'grid';
     }
     showProjects(1);
   </script>
