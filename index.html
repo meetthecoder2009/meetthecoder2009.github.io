@@ -419,12 +419,84 @@ def onMousePress(x, y):
     </div>
           
     <!-- Project 6 -->
-    <div id="project6" class="projects">
+    <div id="project5" class="projects">
       <div class="project">
-        <h3>Project 6</h3>
-        <p>Coming soon.</p>
+        <h3>Project 6: Water Warrior</h3>
+        <iframe https://academy.cs.cmu.edu/sharing/tealEagle643353 ></iframe>
+        <p>In Water Warrior, players control a truck on a mission to deliver clean water to villages in need. First, they must reach the blue reservoir to collect water, then navigate through obstacles to deliver it to all three villages before time runs out. Players must avoid red walls. The game also includes a random fact generator that shares real-world statistics about water pollution and its global impact, raising awareness while you play.</p>
+        <div class="left-title">What I learned</div>
+        <ul class="left-text">
+          <li>Implemented a countdown timer using <code>onStep</code> to track game time</li>
+          <li>Controlled truck movement with keyboard events using <code>onKeyHold</li>
+          <li>Detected collisions using <code>.hitsShape()</code> for game interactions</li>
+          <li>Used <code>.visible</code> and <code>.toFront()</code> to manage screen transitions and layering</li>
+          <li>Displayed random facts using <code>randrange()</code> and dynamic labels</li>
+        </ul>
+        <pre>
+# Python Code Snippet (CMU Academy)
+#app.stepsPerSecond = 1
+app.onStepsCounter = 0
+
+app.seconds = 28
+app.secondlabel = Label(app.seconds, 110,25,size=20, visible = False)
+app.reallabel = Label('  seconds remaining', 210,25,size=20, visible = False)
+app.terminationlabel = Label('Times up!', 210,25, size=20,visible = False)
+def onStep():
+    app.onStepsCounter += 1
+    
+    if gameZone.visible == True:
+        app.secondlabel.visible = True
+        app.reallabel.visible = True
+        
+        if (app.onStepsCounter % 30) == 0:
+            app.seconds -= 1
+            
+        if app.seconds > 0:
+            app.secondlabel.value = app.seconds
+        elif app.seconds == 0:
+            gameZone.visible = False
+            app.terminationlabel.visible = True
+            app.secondlabel.visible = False
+            app.reallabel.visible = False
+            lose()
+            
+app.reallabel.toFront()
+
+def borders(x,y,width,height):
+    wall = Rect(x,y,width,height, fill='red')
+    bordergroup.add(wall)
+bordergroup.visible = False
+
+def onMousePress(mouseX, mouseY):
+    if gameInstruction.visible == True:
+        if gameInstruction.contains(mouseX, mouseY):
+            gameInstruction.visible = False
+            gameZone.visible = True
+            bordergroup.visible = True
+            borders(0,200,159,10)
+            borders(241,200,100,10)
+            borders(150,50,10,50)
+            borders(150,160,10,50)
+            borders(150,270,10,95)
+            borders(241,270,10,95)
+            borders(300,260,90,10)
+            borders(241,50,10,155)
+            truck.visible = True
+    elif splashScreen.visible == True:
+        showSplashScreen(mouseX, mouseY)
+    elif statsScreen.visible == True and randomOutline.contains(mouseX, mouseY):
+        showStatisticScreen(mouseX, mouseY)
+        
+        
+         </pre>
+        <div class="left-title">What the code does</div>
+        <p class="left-text">
+        The code runs a 28-second countdown timer shown with labels when gameZone is visible, ending the game and showing a "Times up!" message when time runs out. The borders function draws red walls that appear when the player clicks the instruction screen to start the game. Mouse clicks also switch between the instruction, splash, and stats screens, triggering their respective functions and UI changes.
+        </p>
       </div>
     </div>
+          
+
 
   </section>
 
